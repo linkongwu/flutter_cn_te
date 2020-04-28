@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttercnte/src/test/random_text.dart';
 import '../route/new_route.dart';
 
 class Home extends StatefulWidget {
@@ -44,10 +45,11 @@ class _HomeState extends State<Home> {
                     MaterialPageRoute(
                         maintainState: false,
                         builder: (context) {
-                          return NewRoute();
+                          return RouterTestRoute();
                         }));
               },
             ),
+            RandomWordsWight(),
           ],
         ),
       ),

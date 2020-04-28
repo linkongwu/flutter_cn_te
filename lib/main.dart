@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercnte/src/home/home.dart';
+import 'package:fluttercnte/src/route/new_route.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +10,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(accentColor: Colors.yellow),
-      title: "fdsf",
+      title: "demo",
+      routes: {
+        "new_page": (context) => NewRoute(),
+        // "/": (context) => Home(title: "flutter 默认界面编写"),
+      },
       home: Home(title: "flutter 默认界面编写"),
     );
   }
