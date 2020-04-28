@@ -4,6 +4,7 @@ import 'package:fluttercnte/src/test/tapbox_a.dart';
 import 'package:fluttercnte/src/test/tapbox_b.dart';
 import '../route/new_route.dart';
 import '../cuptino/cuption_route.dart';
+import '../test/tapbox_c.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -99,6 +100,22 @@ class _HomeState extends State<Home> {
                         maintainState: false,
                         builder: (context) {
                           return ParentWidget();
+                        }));
+              },
+            ),
+            FlatButton(
+              textColor: Colors.brown,
+              child: Text(
+                "打开TapboxC页面",
+                style: TextStyle(fontSize: 16.6),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        maintainState: false,
+                        builder: (context) {
+                          return ParentWidgetC();
                         }));
               },
             ),
