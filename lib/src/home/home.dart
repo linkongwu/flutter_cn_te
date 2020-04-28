@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercnte/src/test/random_text.dart';
+import 'package:fluttercnte/src/test/state_test.dart';
 import '../route/new_route.dart';
 import '../cuptino/cuption_route.dart';
 
@@ -68,7 +69,38 @@ class _HomeState extends State<Home> {
                         }));
               },
             ),
-            
+            FlatButton(
+              textColor: Colors.brown,
+              child: Text(
+                "打开TapboxA页面",
+                style: TextStyle(fontSize: 16.6),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        maintainState: false,
+                        builder: (context) {
+                          return TapboxA();
+                        }));
+              },
+            ),
+            FlatButton(
+              textColor: Colors.brown,
+              child: Text(
+                "打开TapboxB页面",
+                style: TextStyle(fontSize: 16.6),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        maintainState: false,
+                        builder: (context) {
+                          return ParentWidget();
+                        }));
+              },
+            ),
           ],
         ),
       ),
