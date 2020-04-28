@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercnte/src/test/random_text.dart';
 import '../route/new_route.dart';
+import '../cuptino/cuption_route.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -50,6 +51,24 @@ class _HomeState extends State<Home> {
               },
             ),
             RandomWordsWight(),
+            CuptinoTestRoute(),
+            FlatButton(
+              textColor: Colors.brown,
+              child: Text(
+                "打开CuptinoTestRoute页面",
+                style: TextStyle(fontSize: 16.6),
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        maintainState: false,
+                        builder: (context) {
+                          return CuptinoTestRoute();
+                        }));
+              },
+            ),
+            
           ],
         ),
       ),
