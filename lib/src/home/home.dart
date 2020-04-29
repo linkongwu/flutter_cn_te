@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercnte/src/test/random_text.dart';
-import 'package:fluttercnte/src/test/tapbox_a.dart';
-import 'package:fluttercnte/src/test/tapbox_b.dart';
-import 'package:fluttercnte/src/route/new_route.dart';
-import 'package:fluttercnte/src/cuptino/cuption_route.dart';
-import 'package:fluttercnte/src/test/tapbox_c.dart';
+
 import 'package:fluttercnte/src/test/text_test.dart';
 
 class Home extends StatefulWidget {
@@ -42,7 +37,7 @@ class _HomeState extends State<Home> {
                 FlatButton(
                   textColor: Colors.brown,
                   child: Text(
-                    "打开新页面",
+                    "打开文本测试页面",
                     style: TextStyle(fontSize: 16.6),
                   ),
                   onPressed: () {
@@ -51,93 +46,11 @@ class _HomeState extends State<Home> {
                         MaterialPageRoute(
                             maintainState: false,
                             builder: (context) {
-                              return RouterTestRoute();
-                            }));
-                  },
-                ),
-                RandomWordsWight(),
-                CuptinoTestRoute(),
-                FlatButton(
-                  textColor: Colors.brown,
-                  child: Text(
-                    "打开CuptinoTestRoute页面",
-                    style: TextStyle(fontSize: 16.6),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            maintainState: false,
-                            builder: (context) {
-                              return CuptinoTestRoute();
-                            }));
-                  },
-                ),
-                FlatButton(
-                  textColor: Colors.brown,
-                  child: Text(
-                    "打开TapboxA页面",
-                    style: TextStyle(fontSize: 16.6),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            maintainState: false,
-                            builder: (context) {
-                              return TapboxA();
-                            }));
-                  },
-                ),
-                FlatButton(
-                  textColor: Colors.brown,
-                  child: Text(
-                    "打开TapboxB页面",
-                    style: TextStyle(fontSize: 16.6),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            maintainState: false,
-                            builder: (context) {
-                              return ParentWidget();
-                            }));
-                  },
-                ),
-                FlatButton(
-                  textColor: Colors.brown,
-                  child: Text(
-                    "打开TapboxC页面",
-                    style: TextStyle(fontSize: 16.6),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            maintainState: false,
-                            builder: (context) {
-                              return ParentWidgetC();
+                              return TextTestPage();
                             }));
                   },
                 ),
               ],
-            ),
-            FlatButton(
-              textColor: Colors.brown,
-              child: Text(
-                "打开文本测试页面",
-                style: TextStyle(fontSize: 16.6),
-              ),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        maintainState: false,
-                        builder: (context) {
-                          return TextTestPage();
-                        }));
-              },
             ),
           ],
         ),
