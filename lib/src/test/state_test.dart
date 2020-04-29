@@ -14,91 +14,96 @@ class StateTest extends StatefulWidget {
 class _StateTestState extends State<StateTest> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        FlatButton(
-          textColor: Colors.brown,
-          child: Text(
-            "打开新页面",
-            style: TextStyle(fontSize: 16.6),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("路由"),
+      ),
+      body: Column(
+        children: <Widget>[
+          FlatButton(
+            textColor: Colors.brown,
+            child: Text(
+              "打开新页面",
+              style: TextStyle(fontSize: 16.6),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      maintainState: false,
+                      builder: (context) {
+                        return RouterTestRoute();
+                      }));
+            },
           ),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    maintainState: false,
-                    builder: (context) {
-                      return RouterTestRoute();
-                    }));
-          },
-        ),
-        RandomWordsWight(),
-        CuptinoTestRoute(),
-        FlatButton(
-          textColor: Colors.brown,
-          child: Text(
-            "打开CuptinoTestRoute页面",
-            style: TextStyle(fontSize: 16.6),
+          RandomWordsWight(),
+          CuptinoTestRoute(),
+          FlatButton(
+            textColor: Colors.brown,
+            child: Text(
+              "打开CuptinoTestRoute页面",
+              style: TextStyle(fontSize: 16.6),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      maintainState: false,
+                      builder: (context) {
+                        return CuptinoTestRoute();
+                      }));
+            },
           ),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    maintainState: false,
-                    builder: (context) {
-                      return CuptinoTestRoute();
-                    }));
-          },
-        ),
-        FlatButton(
-          textColor: Colors.brown,
-          child: Text(
-            "打开TapboxA页面",
-            style: TextStyle(fontSize: 16.6),
+          FlatButton(
+            textColor: Colors.brown,
+            child: Text(
+              "打开TapboxA页面",
+              style: TextStyle(fontSize: 16.6),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      maintainState: false,
+                      builder: (context) {
+                        return TapboxA();
+                      }));
+            },
           ),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    maintainState: false,
-                    builder: (context) {
-                      return TapboxA();
-                    }));
-          },
-        ),
-        FlatButton(
-          textColor: Colors.brown,
-          child: Text(
-            "打开TapboxB页面",
-            style: TextStyle(fontSize: 16.6),
+          FlatButton(
+            textColor: Colors.brown,
+            child: Text(
+              "打开TapboxB页面",
+              style: TextStyle(fontSize: 16.6),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      maintainState: false,
+                      builder: (context) {
+                        return ParentWidget();
+                      }));
+            },
           ),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    maintainState: false,
-                    builder: (context) {
-                      return ParentWidget();
-                    }));
-          },
-        ),
-        FlatButton(
-          textColor: Colors.brown,
-          child: Text(
-            "打开TapboxC页面",
-            style: TextStyle(fontSize: 16.6),
+          FlatButton(
+            textColor: Colors.brown,
+            child: Text(
+              "打开TapboxC页面",
+              style: TextStyle(fontSize: 16.6),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      maintainState: false,
+                      builder: (context) {
+                        return ParentWidgetC();
+                      }));
+            },
           ),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    maintainState: false,
-                    builder: (context) {
-                      return ParentWidgetC();
-                    }));
-          },
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
