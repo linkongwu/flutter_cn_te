@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+const textStyle = const TextStyle(fontFamily: 'Raleway');
+var buttonText = const Text(
+  "use the font for this text",
+  style: textStyle,
+);
+
 class TextTestPage extends StatefulWidget {
   @override
   _TextTestPageState createState() => _TextTestPageState();
@@ -71,9 +77,10 @@ class _TextTestPageState extends State<TextTestPage> {
                       "I am a K",
                       style: TextStyle(inherit: false, color: Colors.grey),
                     ),
+                    buttonText,
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ],
