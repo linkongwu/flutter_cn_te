@@ -5,6 +5,7 @@ import 'package:fluttercnte/src/test/image_test.dart';
 import 'package:fluttercnte/src/test/state_test.dart';
 import 'package:fluttercnte/src/test/switch_checkbox_test_route.dart';
 import 'package:fluttercnte/src/test/text_test.dart';
+import 'package:fluttercnte/src/test/textfild_form_test.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -135,6 +136,22 @@ class _HomeState extends State<Home> {
                             maintainState: false,
                             builder: (context) {
                               return SwitchAndCheckBoxTestRoute();
+                            }));
+                  },
+                ),
+                FlatButton(
+                  textColor: Colors.brown,
+                  child: Text(
+                    "打开textfile form测试页面",
+                    style: TextStyle(fontSize: 16.6),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            maintainState: false,
+                            builder: (context) {
+                              return TextfildAndFormTest();
                             }));
                   },
                 ),
