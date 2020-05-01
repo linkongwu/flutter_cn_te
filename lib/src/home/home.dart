@@ -3,6 +3,7 @@ import 'package:fluttercnte/src/test/button_test.dart';
 import 'package:fluttercnte/src/test/form_test.dart';
 import 'package:fluttercnte/src/test/icon_test.dart';
 import 'package:fluttercnte/src/test/image_test.dart';
+import 'package:fluttercnte/src/test/indicator_test.dart';
 import 'package:fluttercnte/src/test/state_test.dart';
 import 'package:fluttercnte/src/test/switch_checkbox_test_route.dart';
 import 'package:fluttercnte/src/test/text_test.dart';
@@ -88,10 +89,6 @@ class _HomeState extends State<Home> {
                             }));
                   },
                 ),
-              ],
-            ),
-            Column(
-              children: <Widget>[
                 FlatButton(
                   textColor: Colors.brown,
                   child: Text(
@@ -172,6 +169,27 @@ class _HomeState extends State<Home> {
                             }));
                   },
                 ),
+                FlatButton(
+                  textColor: Colors.brown,
+                  child: Text(
+                    "打开indicator测试页面",
+                    style: TextStyle(fontSize: 16.6),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            maintainState: false,
+                            builder: (context) {
+                              return IndicatorTest();
+                            }));
+                  },
+                ),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                ProgressRoute(),
               ],
             )
           ],
