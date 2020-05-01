@@ -5,7 +5,7 @@ import 'package:fluttercnte/src/test/image_test.dart';
 import 'package:fluttercnte/src/test/state_test.dart';
 import 'package:fluttercnte/src/test/switch_checkbox_test_route.dart';
 import 'package:fluttercnte/src/test/text_test.dart';
-import 'package:fluttercnte/src/test/textfild_form_test.dart';
+import 'package:fluttercnte/src/test/textfild_test.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -151,7 +151,7 @@ class _HomeState extends State<Home> {
                         MaterialPageRoute(
                             maintainState: false,
                             builder: (context) {
-                              return TextfildAndFormTest();
+                              return TextfildTest();
                             }));
                   },
                 ),
