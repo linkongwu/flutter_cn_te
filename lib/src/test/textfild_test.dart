@@ -9,12 +9,12 @@ class _TextfildTestState extends State<TextfildTest> {
   TextEditingController _unameController = TextEditingController();
   TextEditingController _selectionController = TextEditingController();
 
-  @override
-  void initState() {
-    _unameController.addListener(() {
-      print(_unameController.text);
-    });
-  }
+  // @override
+  // void initState() {
+  //   _unameController.addListener(() {
+  //     print(_unameController.text);
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
