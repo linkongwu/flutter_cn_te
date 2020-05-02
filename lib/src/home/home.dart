@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercnte/src/home/home1_3.dart';
+import 'package:fluttercnte/src/test/scaffold_test.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -39,6 +40,15 @@ class _HomeState extends State<Home> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
                       return HomeTestFirToSec();
+                    }));
+                  },
+                ),
+                FlatButton(
+                  child: Text("ScaffoldTest"),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return ScaffoldTest();
                     }));
                   },
                 )
