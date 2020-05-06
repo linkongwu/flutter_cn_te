@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:fluttercnte/src/test/icon_test.dart';
 
 class ScaffoldTest extends StatefulWidget {
   @override
@@ -17,7 +14,7 @@ class _ScaffoldTestState extends State<ScaffoldTest>
   @override
   void initState() {
     super.initState();
-    // 创建Controller
+    // 创建Controllerx
     _tabController = TabController(length: tabs.length, vsync: this);
   }
 
