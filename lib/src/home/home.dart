@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercnte/src/home/home1_3.dart';
+import 'package:fluttercnte/src/push_view/girdview.dart';
 import 'package:fluttercnte/src/push_view/listview.dart';
 import 'package:fluttercnte/src/push_view/single_view.dart';
 import 'package:fluttercnte/src/test/scaffold_test.dart';
@@ -69,6 +70,15 @@ class _HomeState extends State<Home> {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
                       return InfiniteListView();
+                    }));
+                  },
+                ),
+                FlatButton(
+                  child: Text("girdListView"),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return GridViewPage();
                     }));
                   },
                 )
