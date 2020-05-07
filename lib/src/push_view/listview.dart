@@ -9,6 +9,8 @@ class InfiniteListView extends StatefulWidget {
 class _InfiniteListViewState extends State<InfiniteListView> {
   static const loadingTag = "##loading##"; //表尾标记
   var _words = <String>[loadingTag];
+  Widget divider1 = Divider(color: Colors.blue,height: .6,);
+  Widget divider2 = Divider(color: Colors.red,height: .6,);
 
   @override
   void initState() {
@@ -51,7 +53,9 @@ class _InfiniteListViewState extends State<InfiniteListView> {
         //显示单词列表项
         return ListTile(title: Text(_words[index]));
       },
-      separatorBuilder: (context, index) => Divider(height: .0),
+      separatorBuilder: (context, index) {
+        return index%2==0 ? divider1:divider2;
+      },
     ));
   }
 
