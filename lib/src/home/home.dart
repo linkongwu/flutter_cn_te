@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttercnte/src/home/home1_3.dart';
+import 'package:fluttercnte/src/push_view/customscrollview_test.dart';
 import 'package:fluttercnte/src/push_view/girdview.dart';
 import 'package:fluttercnte/src/push_view/listview.dart';
 import 'package:fluttercnte/src/push_view/single_view.dart';
@@ -81,7 +82,15 @@ class _HomeState extends State<Home> {
                       return GridViewPage();
                     }));
                   },
-                )
+                ),FlatButton(
+                  child: Text("CutomScrollViewTestRoute"),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return CutomScrollViewTestRoute();
+                    }));
+                  },
+                ),
               ],
             ),
             Column(
