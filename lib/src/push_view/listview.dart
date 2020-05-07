@@ -18,7 +18,8 @@ class _InfiniteListViewState extends State<InfiniteListView> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
+    return Scaffold(
+        body: ListView.separated(
       itemCount: _words.length,
       itemBuilder: (context, index) {
         //如果到了表尾
@@ -51,7 +52,7 @@ class _InfiniteListViewState extends State<InfiniteListView> {
         return ListTile(title: Text(_words[index]));
       },
       separatorBuilder: (context, index) => Divider(height: .0),
-    );
+    ));
   }
 
   void _retrieveData() {
